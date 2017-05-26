@@ -1,86 +1,530 @@
-<div class="row">
-	<div id="breadcrumb" class="col-xs-12">
-		<a href="#" class="show-sidebar">
-			<i class="fa fa-bars"></i>
-		</a>
-		<ol class="breadcrumb pull-left">
-			<li><a href="index.html">Escritorio</a></li>
-			<li><a href="#">Afiliados</a></li>
-			<li><a href="#">Lista de Afiliados</a></li>
-		</ol>
-		<!-- <div id="social" class="pull-right">
-			<a href="#"><i class="fa fa-google-plus"></i></a>
-			<a href="#"><i class="fa fa-facebook"></i></a>
-			<a href="#"><i class="fa fa-twitter"></i></a>
-			<a href="#"><i class="fa fa-linkedin"></i></a>
-			<a href="#"><i class="fa fa-youtube"></i></a>
-		</div> -->
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-xs-12">
-		<div class="box">
-			<div class="box-header">
-				<div class="box-name">
-					<i class="fa fa-user"></i>
-					<span>Lista de Usuarios</span>
-				</div>
-				<div class="box-icons">
-					<a class="collapse-link">
-						<i class="fa fa-chevron-up"></i>
-					</a>
-					<a class="expand-link">
-						<i class="fa fa-expand"></i>
-					</a>
-					<a class="close-link">
-						<i class="fa fa-times"></i>
-					</a>
-				</div>
-				<div class="no-move"></div>
+<div id="my-tabs">
+	<div id="listado-info" style="visibility: visible; position: relative;">
+		<div class="row">
+			<div id="breadcrumb" class="col-xs-12">
+				<a href="#" class="show-sidebar">
+					<i class="fa fa-bars"></i>
+				</a>
+				<ol class="breadcrumb pull-left">
+					<li><a href="index.html">Dashboard</a></li>
+					<li><a href="#">Afiliados</a></li>
+					<li><a href="#">Lista de Afiliados</a></li>
+				</ol>
 			</div>
-			<div class="box-content no-padding table-responsive">
-				<table class="table table-bordered table-striped table-hover table-heading table-datatable" id="datatable-2">
-					<thead>
-						<tr>
-							<th>RUT</th>
-							<th>Nombre</th>
-							<th>Apellido</th>
-							<th>Probabilidad de Fraude</th>
-							<th>Medicos</th>
-							<th>Hospitalizaciones</th>
-							<th>Movimientos I-Med</th>
-							<th>Licencias</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>Ubuntu</td>
-							<td>16%</td>
-							<td><i class="fa fa-home"></i><a class="ajax-link" href="ajax/profile_afiliado.html" >http://ubuntu.com</a></td>
-							<td>13.10</td>
-							<td>13.10</td>
-							<td>13.10</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Debian</td>
-							<td>14.1%</td>
-							<td><i class="fa fa-home"></i><a class="ajax-link" href="ajax/profile_afiliado.html" >http://debian.org</a></td>
-							<td>7.4</td>
-							<td>7.4</td>
-							<td>7.4</td>
-						</tr>
+		</div>
 
-						
-					</tbody>
+		<div class="row">
+			<div id="test-panel" class="col-xs-12">
+				<div class="box">
+					<div class="box-header">
+						<div class="box-name">
+							<i class="fa fa-user"></i>
+							<span>Lista de Afiliados</span>
+						</div>
+						<div class="box-icons">
+							<a class="collapse-link">
+								<i class="fa fa-chevron-up"></i>
+							</a>
+							<a class="expand-link">
+								<i class="fa fa-expand"></i>
+							</a>
+							<a class="close-link">
+								<i class="fa fa-times"></i>
+							</a>
+						</div>
+						<div class="no-move"></div>
+					</div>
+					<div class="box-content no-padding table-responsive">
+						<table class="table table-bordered table-striped table-hover table-heading table-datatable" id="datatable-2">
+							<thead>
+								<tr>
+									<th>RUT</th>
+									<th>Nombre</th>
+									<th>Apellido</th>
+									<th>Probabilidad de Fraude</th>
+									<th>Medicos</th>
+									<th>Hospitalizaciones</th>
+									<th>Movimientos I-Med</th>
+									<th>Licencias</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>30.444.444-9</td>
+									<td>Claudio</td>
+									<td>Fernandez</td>
+									<td><a class="my-link" id="detail">75%</a></td>
+									<td>13.10</td>
+									<td>13.10</td>
+									<td>13.10</td>
+								</tr>
+								<tr>
+									<td>30.444.444-8</td>
+									<td>Claudio</td>
+									<td>Torres</td>
+									<td><a class="my-link" id="detail">75%</a></td>
+									<td>7.4</td>
+									<td>7.4</td>
+									<td>7.4</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-				</table>
+	<div id="listado-detail" style="visibility: hidden; position: absolute;">
+
+		<div id="me-tabs">
+			<div id="afiliado-info" style="display: block; position: relative;">
+
+				<div class="row">
+					<div id="breadcrumb" class="col-xs-12">
+						<a href="#" class="show-sidebar">
+							<i class="fa fa-bars"></i>
+						</a>
+						<ol class="breadcrumb pull-left">
+							<li><a href="index.html">Dashboard</a></li>
+							<li><a href="#">Afiliado</a></li>
+							<li><a href="#">Claudio Fernandez</a></li>
+						</ol>
+					</div>
+				</div>
+
+				<div class="row" style="padding-bottom: 20px">
+					<div class="col-sm-10"><h1>Claudio Fernandez</h1></div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-sm-9">
+						<ul class="nav nav-tabs" id="myTab">
+							<li class="active"><a href="#information" data-toggle="tab">Información</a></li>
+							<li><a href="#historial" data-toggle="tab">Visado SIL</a></li>
+							<li><a href="#historial" data-toggle="tab">Visado Enfermera SIL</a></li>
+							<li><a href="#historial" data-toggle="tab">Visado Medico Contralor</a></li>
+							<li><a href="#acciones" data-toggle="tab">Acciones</a></li>
+						</ul>   
+						<div class="tab-content">
+							<div class="tab-pane active" id="information">
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="box">
+											<div class="box-header">
+												<div class="box-name">
+													<i class="fa fa-user"></i>
+													<span>Datos Personales</span>
+												</div>
+												<div class="box-icons">
+													<a class="collapse-link">
+														<i class="fa fa-chevron-up"></i>
+													</a>
+													<a class="expand-link">
+														<i class="fa fa-expand"></i>
+													</a>
+													<a class="close-link">
+														<i class="fa fa-times"></i>
+													</a>
+												</div>
+												<div class="no-move"></div>
+											</div>
+											<div class="box-content">
+												<div class="row">
+													<div class="form-group">
+														<div class="col-xs-6 inline">
+															<label>RUT :</label>
+															<p>30.444.444-9</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6 inline">
+															<label>Nombres:</label>
+															<p>Claudio</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6 inline">
+															<label>Apellido Paterno:</label>
+															<p>Fernandez</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6 inline">
+															<label>Apellido Materno:</label>
+															<p>Suarez</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6 inline">
+															<label>Sexo:</label>
+															<p>Masculino</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6 inline">
+													<label>Fecha de Nacimiento:</label>
+													<p>17-03-1990</p>
+													</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6 inline">
+															<label>Estado Civil:</label>
+															<p>Soltero</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6 inline">
+															<label>Nacionalidad:</label>
+															<p>Chilena</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6 inline">
+															<label>Dirección:</label>
+															<p>Eyzaguirre 2240</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6 inline">
+															<label>Comuna:</label>
+															<p>Centro</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6 inline">
+															<label>Region:</label>
+															<p>Centro</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6 inline">
+															<label>Telefono Movil:</label>
+															<p>+56 9 9988 7777</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6 inline">
+															<label>Telefono Comercial:</label>
+															<p>+56 9 9988 7777</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="box">
+											<div class="box-header">
+												<div class="box-name">
+													<i class="fa fa-user"></i>
+													<span>Datos Laborales</span>
+												</div>
+												<div class="box-icons">
+													<a class="collapse-link">
+														<i class="fa fa-chevron-up"></i>
+													</a>
+													<a class="expand-link">
+														<i class="fa fa-expand"></i>
+													</a>
+													<a class="close-link">
+														<i class="fa fa-times"></i>
+													</a>
+												</div>
+												<div class="no-move"></div>
+											</div>
+											<div class="box-content">
+												<div class="row">
+													<div class="form-group">
+														<div class="col-xs-6">
+															<label>Tipo de Trabajador:</label>
+															<p>Dependiente nuevo</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6">
+															<label>Clase de cotizante:</label>
+															<p>Activo</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6">
+															<label>Inicio de labores:</label>
+															<p>Activo</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6">
+															<label>Profesión:</label>
+															<p>Artista</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6">
+															<label>Renta imponible:</label>
+															<p>2.000.000,00</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="box">
+											<div class="box-header">
+												<div class="box-name">
+													<i class="fa fa-user"></i>
+													<span>Empleadores</span>
+												</div>
+												<div class="box-icons">
+													<a class="collapse-link">
+														<i class="fa fa-chevron-up"></i>
+													</a>
+													<a class="expand-link">
+														<i class="fa fa-expand"></i>
+													</a>
+													<a class="close-link">
+														<i class="fa fa-times"></i>
+													</a>
+												</div>
+												<div class="no-move"></div>
+											</div>
+											<div class="box-content">
+												<div class="row">
+													<div class="form-group">
+														<div class="col-xs-6">
+															<label>Nombre de la Empresa:</label>
+															<p><a href="#">Consalud LTDA</a></p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6">
+															<label>RUT:</label>
+															<p><a href="#">30.000.000-9</a></p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6">
+															<label>Razón social:</label>
+															<p><a href="#">Orquesta Sinfonica LTDA</a></p>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="col-xs-6">
+															<label>Dirección:</label>
+															<p>Las Condes</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+							<!-- HISTORIAL -->
+							<div class="tab-pane" id="historial">
+								<ul class="list-group">
+									<li class="list-group-item text-muted">Historial de Licencias <span class="pull-right">Visado SIL</span></li>
+									<li class="list-group-item text-right">
+										<a class="me-link pull-left" id="licencia" style="cursor: pointer;">Licencia por Estrés</a>
+										<a class="btn btn-danger">PENDIENTE</a>
+									</li>
+									<li class="list-group-item text-right">
+										<a class="me-link pull-left" id="licencia" style="cursor: pointer;">Licencia por dolor de Rodilla</a>
+										<a class="btn btn-primary">VISADO</a>
+									</li>
+								</ul> 
+							</div>
+
+							<div class="tab-pane" id="acciones">
+								<div class="form-group">
+									<div class="col-xs-12">
+										<button class="btn btn-lg btn-primary">Peritaje</button>
+										<button class="btn btn-lg btn-primary">Judilización</button>   
+										<button class="btn btn-lg btn-primary">Nuevos Estudios</button>   
+										<button class="btn btn-lg btn-primary">Pago Licencia</button>   
+									</div>
+								</div>
+							</div>
+
+							<div class="tab-pane" id="settings">
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+
+						<div class="panel panel-default">
+							<div class="panel-heading text-head">Ranking Afiliado</div>
+							<div class="panel-body text-center"><a class="ranking text-danger" href="#">30%</a></div>
+						</div>  
+
+						<div class="panel panel-default">
+							<div class="panel-heading text-head">Probabilidad de Fraude</div>
+							<div class="panel-body text-center "><a class="ranking text-danger" href="#">75%</a></div>
+						</div>  
+
+						<ul class="list-group">
+							<li class="list-group-item text-head">Mal Uso / Fraude</li>
+							<li class="list-group-item text-right"><span class="pull-left"><strong>Casos de Mal Uso</strong></span><a href="#"> 3</a></li>  
+							<li class="list-group-item text-right"><span class="pull-left"><strong>Casos de Fraude</strong></span><a href="#"> 1</a></li>  
+						</ul> 
+
+						<ul class="list-group">
+							<li class="list-group-item text-head">Perfil</li>
+							<li class="list-group-item text-right"><span class="pull-left"><strong>Afiliado desde</strong></span> 2-2-11</li>
+							<li class="list-group-item text-right"><span class="pull-left"><strong>Ultima Licencia</strong></span> 30-3-17</li>  
+						</ul> 
+
+						<ul class="list-group">
+							<li class="list-group-item text-head">Afiliación</li>
+							<li class="list-group-item text-right"><span class="pull-left"><strong>Plan</strong></span> <a href="#">#04039</a></li>
+							<li class="list-group-item text-right"><span class="pull-left"><strong>Valor del Plan</strong></span> 10UF</li>
+						</ul> 
+
+						<div class="panel panel-default">
+							<div class="panel-heading text-head">Redes Sociales</div>
+							<div class="panel-body">
+								<i class="fa fa-facebook fa-2x"></i> <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-google-plus fa-2x"></i>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+
+			<div id="afiliado-licencia" style="display: none; position: absolute;">
+				<div class="row">
+					<div id="breadcrumb" class="col-xs-12">
+						<a href="#" class="show-sidebar">
+							<i class="fa fa-bars"></i>
+						</a>
+						<ol class="breadcrumb pull-left">
+							<li><a href="index.html">Dashboard</a></li>
+							<li><a href="#">Afiliados</a></li>
+							<li><a href="#">licencias</a></li>
+							<li><a href="#">0001919</a></li>
+						</ol>
+					</div>
+				</div>
+
+				<div class="row" style="padding-bottom: 20px">
+					<div class="col-sm-10"><h1>Claudio Fernandez <small>Licencia  Medica #0001919</small></h1></div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="box">
+							<div class="box-header">
+								<div class="box-name">
+									<i class="fa fa-user"></i>
+									<span>Identificación del Trabajador</span>
+								</div>
+								<div class="box-icons">
+									<a class="collapse-link">
+										<i class="fa fa-chevron-up"></i>
+									</a>
+									<a class="expand-link">
+										<i class="fa fa-expand"></i>
+									</a>
+									<a class="close-link">
+										<i class="fa fa-times"></i>
+									</a>
+								</div>
+								<div class="no-move"></div>
+							</div>
+							<div class="box-content">
+								<div class="row">
+									<form class="form" action="##" method="post" id="registrationForm">
+										<div class="form-group">
+											<div class="col-xs-6">
+												<label for="first_name">Nombres:</label>
+												<input type="text" class="form-control" name="first_name" id="first_name" placeholder="Claudio" title="Claudio">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-xs-6">
+												<label for="last_name">Apellido Paterno:</label>
+												<input type="text" class="form-control" name="last_name" id="last_name" placeholder="Fernandez" title="Fernandez">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-xs-6">
+												<label for="phone">Apellido Materno:</label>
+												<input type="text" class="form-control" name="phone" id="phone" placeholder="Suarez" title="Suarez">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="col-xs-6">
+												<label for="mobile">RUN</label>
+												<input type="text" class="form-control" name="mobile" id="mobile" placeholder="9.999.999-0" title="9.999.999-0">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-xs-6">
+												<label for="email">Fecha Emisión de Licencia:</label>
+												<input class="form-control" name="email" id="email" placeholder="21-05-2017" title="21-05-2017">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-xs-6">
+												<label for="email">Fecha de Inicio de Reposo:</label>
+												<input class="form-control" id="location" placeholder="22-05-17" title="22-05-17">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-xs-6">
+												<label for="password">Edad:</label>
+												<input class="form-control" name="password" id="password" placeholder="44" title="44">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-xs-6">
+												<label for="password2">Sexo:</label>
+												<inputclass="form-control" name="password2" id="password2" placeholder="Masculino" title="Masculino">
+											</div>
+										</div>
+										<!-- <div class="col-xs-6">
+											<label for="email">Tipo de Licencia:</label>
+											<select class="form-control">
+												<option>ENFERMEDAD O ACCIDENTE COMUN</option>
+												<option>PRORROGA MEDICA PREVENTIVA</option>
+												<option>LICENCIA MATERNAL PRE Y POST NATAL</option>
+												<option>ENFERMEDAD GRAVE HIJO MENOR DE 1 AÑO</option>
+												<option>ACCIDENTE DEL TRABAJO O DEL TRAYECTO</option>
+												<option>ENFERMEDAD PROFESIONAL</option>
+												<option>PATOLOGIA DEL EMBARAZON</option>
+											</select>
+										</div>
+										<div class="col-xs-6">
+											<label>Recuperabilidad Laboral</label>
+											<input class="form-control" placeholder="Si" title="Si">
+										</div> -->
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-xs-12">
+						<a class="btn btn-lg btn-primary me-link" href="#" id="info">Volver</a>
+						<button class="btn btn-lg btn-primary">Guardar</button>
+						<button class="btn btn-lg btn-primary">Aprobar</button>   
+						<button class="btn btn-lg btn-primary">Enviar COMPIN</button>   
+						<a target="_blank" href="/img/0001.pdf" class="btn btn-lg btn-primary">Ver Fisico</a>   
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+	
 
 <script type="text/javascript">
 // Run Datables plugin and create 3 variants of settings
@@ -98,7 +542,8 @@ function MakeSelect2(){
 }
 $(document).ready(function() {
 	// Load Datatables and run plugin on tables 
-
+	ShowMeTheMainContent();
+	ShowMeTheContent();
 	// Add Drag-n-Drop feature
 	WinMove();
 });

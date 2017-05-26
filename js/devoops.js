@@ -1233,10 +1233,10 @@ function DrawKnob(elem){
 		},
 		release : function (value) {
 			//console.log(this.$.attr('value'));
-			console.log("release : " + value);
+			//console.log("release : " + value);
 		},
 		cancel : function () {
-			console.log("cancel : ", this);
+			//console.log("cancel : ", this);
 		},
 		draw : function () {
 			// "tron" case
@@ -1404,15 +1404,29 @@ function DashboardTabChecker(){
 	});
 }
 
+function ShowMeTheMainContent(){
+	$('#content').on('click', 'a.my-link', function(e){
+		e.preventDefault();
+		console.log("click");
+		$('div#my-tabs').find('div[id^=listado]').each(function(){
+			$(this).css('visibility', 'hidden').css('position', 'absolute');
+		});
+		var attr = $(this).attr('id');
+		$('#'+'listado-'+attr).css('visibility', 'visible').css('position', 'relative');
+		//$(this).closest('.nav').find('li').removeClass('active');
+		//$(this).closest('li').addClass('active');
+	});
+}
+
 function ShowMeTheContent(){
 	$('#content').on('click', 'a.me-link', function(e){
 		e.preventDefault();
 		console.log("click");
 		$('div#me-tabs').find('div[id^=afiliado]').each(function(){
-			$(this).css('visibility', 'hidden').css('position', 'absolute');
+			$(this).css('display', 'none').css('position', 'absolute');
 		});
 		var attr = $(this).attr('id');
-		$('#'+'afiliado-'+attr).css('visibility', 'visible').css('position', 'relative');
+		$('#'+'afiliado-'+attr).css('display', 'block').css('position', 'relative');
 		//$(this).closest('.nav').find('li').removeClass('active');
 		//$(this).closest('li').addClass('active');
 	});
@@ -1848,7 +1862,7 @@ function MorrisChart2(){
 		labels: ['Y', 'Z', 'M']
 		})
 		.on('click', function(i, row){
-			console.log(i, row);
+			//console.log(i, row);
 		});
 }
 //
@@ -3406,6 +3420,21 @@ $(document).ready(function () {
 	$('#top-panel').on('click','a', function(e){
 		if ($(this).hasClass('ajax-link')) {
 			e.preventDefault();
+			if ($(this).hasClass('add-full')) {
+				$('#content').addClass('full-content');
+			}
+			else {
+				$('#content').removeClass('full-content');
+			}
+			var url = $(this).attr('href');
+			window.location.hash = url;
+			LoadAjaxContent(url);
+		}
+	});
+	$('#test-panel').on('click','a', function(e){
+		if ($(this).hasClass('ajax-link')) {
+			e.preventDefault();
+			console.log("click");
 			if ($(this).hasClass('add-full')) {
 				$('#content').addClass('full-content');
 			}
