@@ -2548,23 +2548,7 @@ function SparklineLoop(){
 // Draw Morris charts on Dashboard (panel- Statistics - Planning + 3 donuts)
 //
 function MorrisDashboard(){
-	Morris.Line({
-		element: 'stat-graph',
-		data: [
-			{"period": "2017-5-22", "Fraude": 159, "No Fraude": 47 },
-			{"period": "2017-5-23", "Fraude": 155, "No Fraude": 51 },
-			{"period": "2017-5-24", "Fraude": 163, "No Fraude": 49 },
-			{"period": "2017-5-25", "Fraude": 162, "No Fraude": 48 },
-			{"period": "2017-5-26", "Fraude": 157, "No Fraude": 47 },
-			{"period": "2017-5-27", "Fraude": 158, "No Fraude": 50 },
-			{"period": "2017-5-28", "Fraude": 163, "No Fraude": 49 },
-			{"period": "2017-5-29", "Fraude": 160, "No Fraude": 49 },
-			{"period": "2017-5-30", "Fraude": 158, "No Fraude": 48 }
-		],
-		xkey: 'period',
-		ykeys: ['Fraude', 'No Fraude'],
-		labels: ['Fraude', 'No Fraude']
-	});
+	
 	Morris.Donut({
 		element: 'morris_donut_1',
 		data: [
